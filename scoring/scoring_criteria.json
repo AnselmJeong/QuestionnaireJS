@@ -1,0 +1,414 @@
+{
+    "assessments": [
+        {
+            "name": "BDI",
+            "reverse_scoring_items": [],
+            "scoring_range": [
+                0,
+                63
+            ],
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        9
+                    ],
+                    "category": "정상",
+                    "description": "정상적인 상태입니다."
+                },
+                {
+                    "range": [
+                        10,
+                        15
+                    ],
+                    "category": "가벼운 우울",
+                    "description": "가벼운 우울 상태입니다."
+                },
+                {
+                    "range": [
+                        16,
+                        25
+                    ],
+                    "category": "중등도 우울",
+                    "description": "중등도 우울 상태입니다."
+                },
+                {
+                    "range": [
+                        26,
+                        63
+                    ],
+                    "category": "심한 우울",
+                    "description": "심한 우울 상태입니다."
+                }
+            ]
+        },
+        {
+            "name": "BAI",
+            "scoring_range": [
+                0,
+                63
+            ],
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        7
+                    ],
+                    "category": "정상",
+                    "description": "정상적인 상태입니다."
+                },
+                {
+                    "range": [
+                        8,
+                        15
+                    ],
+                    "category": "가벼운 불안",
+                    "description": "가벼운 불안 상태입니다."
+                },
+                {
+                    "range": [
+                        16,
+                        25
+                    ],
+                    "category": "중등도 불안",
+                    "description": "중등도 불안 상태입니다."
+                },
+                {
+                    "range": [
+                        26,
+                        63
+                    ],
+                    "category": "심한 불안",
+                    "description": "심한 불안 상태입니다."
+                }
+            ]
+        },
+        {
+            "name": "K-MDQ",
+            "scoring_range": [
+                0,
+                13
+            ],
+            "criteria": [
+                {
+                    "threshold": 7,
+                    "category": "양극성 장애 의심",
+                    "description": "양극성 장애일 가능성이 높습니다.",
+                    "additional_condition": {
+                        "field": "simultaneity",
+                        "value": true,
+                        "description": "다양한 증상이 동시에 발생했어야 양극성 장애 진단 조건이 충족됩니다."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "GDS-SF",
+            "scoring_range": [
+                0,
+                15
+            ],
+            "reverse_scoring_items": [
+                1,
+                5,
+                7,
+                11,
+                13
+            ],
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        10
+                    ],
+                    "category": "정상"
+                },
+                {
+                    "range": [
+                        11,
+                        20
+                    ],
+                    "category": "가벼운 우울"
+                },
+                {
+                    "range": [
+                        21,
+                        30
+                    ],
+                    "category": "심한 우울"
+                }
+            ]
+        },
+        {
+            "name": "AUDIT",
+            "criteria_by_gender": {
+                "남": [
+                    {
+                        "range": [
+                            0,
+                            9
+                        ],
+                        "category": "정상음주",
+                        "description": "‘정상음주군’에 속하고 있으며, 비교적 건강하고 안전한 음주습관을 가지고 있습니다."
+                    },
+                    {
+                        "range": [
+                            10,
+                            19
+                        ],
+                        "category": "위험음주",
+                        "description": "‘위험음주군’으로 음주에 대한 단기개입과 지속적인 모니터링이 필요합니다."
+                    },
+                    {
+                        "range": [
+                            20,
+                            null
+                        ],
+                        "category": "알코올사용장애",
+                        "description": "알코올사용장애가 의심됩니다. 적어도 결핍, ‘사용장애추정군’으로 신체증상, 불안, 불면, 사회부적응, 우울 등 증상이 나타날 수 있으므로 세심한 관찰과 전문가의 치료적 개입이 필요합니다."
+                    }
+                ],
+                "여": [
+                    {
+                        "range": [
+                            0,
+                            5
+                        ],
+                        "category": "정상음주",
+                        "description": "‘정상음주군’에 속하고 있으며, 비교적 건강하고 안전한 음주습관을 가지고 있습니다."
+                    },
+                    {
+                        "range": [
+                            6,
+                            9
+                        ],
+                        "category": "위험음주",
+                        "description": "‘위험음주군’으로 음주에 대한 단기개입과 지속적인 모니터링이 필요합니다."
+                    },
+                    {
+                        "range": [
+                            10,
+                            null
+                        ],
+                        "category": "알코올사용장애",
+                        "description": "알코올사용장애가 의심됩니다. 적어도 결핍, ‘사용장애추정군’으로 신체증상, 불안, 불면, 사회부적응, 우울 등 증상이 나타날 수 있으므로 세심한 관찰과 전문가의 치료적 개입이 필요합니다."
+                    }
+                ]
+            }
+        },
+        {
+            "name": "OCI-R",
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        20
+                    ],
+                    "category": "정상",
+                    "description": "강박장애 증상이 정상 범위에 있습니다."
+                },
+                {
+                    "range": [
+                        21,
+                        72
+                    ],
+                    "category": "유의한 강박장애",
+                    "description": "강박장애가 의심됩니다. 전문가의 상담을 권장합니다."
+                }
+            ]
+        },
+        {
+            "name": "PCL-K-5",
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        36
+                    ],
+                    "category": "정상",
+                    "description": "외상후 스트레스 장애 증상이 정상 범위에 있습니다."
+                },
+                {
+                    "range": [
+                        37,
+                        80
+                    ],
+                    "category": "유의한 외상후 스트레스 장애",
+                    "description": "외상후 스트레스 장애가 의심됩니다. 전문가의 상담을 권장합니다."
+                }
+            ]
+        },
+        {
+            "name": "PSS",
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        13
+                    ],
+                    "category": "낮음",
+                    "description": "스트레스 수준이 낮으며, 심리적으로 안정되어 있는 상태입니다."
+                },
+                {
+                    "range": [
+                        14,
+                        17
+                    ],
+                    "category": "중간",
+                    "description": "스트레스 수준이 중간 정도로 나타나며, 일상생활에서 약간의 어려움을 겪을 수 있습니다."
+                },
+                {
+                    "range": [
+                        18,
+                        40
+                    ],
+                    "category": "높음",
+                    "description": "스트레스 수준이 높으며, 일상생활에 어려움을 겪고 있을 가능성이 있습니다."
+                }
+            ]
+        },
+        {
+            "name": "PDSS-SR",
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        2
+                    ],
+                    "category": "정상",
+                    "description": "공황장애 증상이 정상 범위에 있습니다."
+                },
+                {
+                    "range": [
+                        3,
+                        7
+                    ],
+                    "category": "경미한 수준",
+                    "description": "경미한 공황장애 증상이 있습니다."
+                },
+                {
+                    "range": [
+                        8,
+                        10
+                    ],
+                    "category": "중간 수준",
+                    "description": "중간 수준의 공황장애 증상이 있습니다."
+                },
+                {
+                    "range": [
+                        11,
+                        14
+                    ],
+                    "category": "약간 심한 수준",
+                    "description": "약간 심한 공황장애 증상이 있습니다."
+                },
+                {
+                    "range": [
+                        15,
+                        28
+                    ],
+                    "category": "매우 심한 수준",
+                    "description": "매우 심한 공황장애 증상이 있습니다. 전문가의 상담을 권장합니다."
+                }
+            ]
+        },
+        {
+            "name": "GDS-SF",
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        5
+                    ],
+                    "category": "정상",
+                    "description": "정상적인 상태입니다."
+                },
+                {
+                    "range": [
+                        6,
+                        9
+                    ],
+                    "category": "가벼운 우울증",
+                    "description": "가벼운 우울증 상태입니다."
+                },
+                {
+                    "range": [
+                        10,
+                        15
+                    ],
+                    "category": "심한 우울증",
+                    "description": "심한 우울증 상태입니다. 전문가의 상담을 권장합니다."
+                }
+            ]
+        },
+        {
+            "name": "K-EPDS",
+            "criteria": [
+                {
+                    "range": [
+                        0,
+                        8
+                    ],
+                    "category": "정상",
+                    "description": "산후우울증 증상이 정상 범위에 있습니다."
+                },
+                {
+                    "range": [
+                        9,
+                        12
+                    ],
+                    "category": "상담 필요",
+                    "description": "산후우울증 증상으로 인해 상담이 필요합니다."
+                },
+                {
+                    "range": [
+                        13,
+                        30
+                    ],
+                    "category": "심각한 산후 우울증",
+                    "description": "심각한 산후우울증 증상이 있습니다. 즉시 전문가의 상담을 받으시기 바랍니다."
+                }
+            ]
+        },
+        {
+            "name": "PSWQ",
+            "reverse_scoring_items": [
+                1,
+                3,
+                8,
+                10,
+                11
+            ],
+            "scoring_range": [
+                16,
+                80
+            ],
+            "criteria": [
+                {
+                    "range": [
+                        16,
+                        39
+                    ],
+                    "category": "거의 걱정하지 않음",
+                    "description": "걱정 수준이 낮으며, 정상적인 상태입니다."
+                },
+                {
+                    "range": [
+                        40,
+                        59
+                    ],
+                    "category": "유의하지만 참을만한 걱정",
+                    "description": "약간의 걱정이 있지만 일상생활에 큰 지장은 없는 수준입니다."
+                },
+                {
+                    "range": [
+                        60,
+                        80
+                    ],
+                    "category": "심하고, 지나친 걱정",
+                    "description": "심한 걱정으로 일상생활에 지장을 받고 있습니다. 전문가의 상담을 권장합니다."
+                }
+            ]
+        }
+    ]
+}
