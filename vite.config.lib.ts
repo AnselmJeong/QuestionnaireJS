@@ -13,4 +13,18 @@ export default defineConfig({
       "@": path.resolve(currentDirectory, "./src"),
     },
   },
+  build: {
+    lib: {
+      entry: path.resolve(currentDirectory, "src/lib/index.bundle.ts"),
+      name: "QuestionnaireJS",
+      formats: ["es", "cjs"],
+      fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
+      cssFileName: "style",
+    },
+    rollupOptions: {
+      external: ["react", "react-dom", "react/jsx-runtime"],
+    },
+    outDir: "dist",
+    emptyOutDir: true,
+  },
 });

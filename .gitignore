@@ -1,0 +1,8 @@
+dist
+node_modules
+.env
+.DS_Store
+.vscode
+.idea
+.agent
+questionnaire-js-0.1.1.tgz
